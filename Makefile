@@ -1,6 +1,6 @@
 PROJECT       ?= docker-awscli
 REGISTRY      ?= quay.io/flippa
-TAG           ?= v2
+TAG           ?= v3
 IMAGE          = $(REGISTRY)/$(PROJECT):$(TAG)
 
 .PHONY: image push shell
