@@ -1,15 +1,18 @@
 PROJECT       ?= docker-awscli
 REGISTRY      ?= quay.io/flippa
-TAG           ?= v3
+TAG           ?= v4
 IMAGE          = $(REGISTRY)/$(PROJECT):$(TAG)
+LATEST         = $(REGISTRY)/$(PROJECT):latest
 
 .PHONY: image push shell
 
 image:
 	docker build --rm -t $(IMAGE) .
+	docker tag -f $(IMAGE) $(LATEST)
 
 push:
 	docker push $(IMAGE)
+	docker push $(LATEST)
 
 shell:
 	docker run --rm -it \
