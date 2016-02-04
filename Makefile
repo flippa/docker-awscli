@@ -1,5 +1,5 @@
 PROJECT       ?= docker-awscli
-REGISTRY      ?= quay.io/flippa
+REGISTRY      ?= flippa
 TAG           ?= v4
 IMAGE          = $(REGISTRY)/$(PROJECT):$(TAG)
 LATEST         = $(REGISTRY)/$(PROJECT):latest
