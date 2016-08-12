@@ -1,6 +1,6 @@
 PROJECT       ?= docker-awscli
 REGISTRY      ?= flippa
-TAG           ?= v4
+TAG           ?= v5
 IMAGE          = $(REGISTRY)/$(PROJECT):$(TAG)
 LATEST         = $(REGISTRY)/$(PROJECT):latest
 
