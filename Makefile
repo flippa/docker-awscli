@@ -1,6 +1,6 @@
 PROJECT       ?= docker-awscli
 REGISTRY      ?= flippa
-TAG           ?= v5
+TAG           ?= v6
 IMAGE          = $(REGISTRY)/$(PROJECT):$(TAG)
 
 .PHONY: build push shell
